@@ -1,0 +1,4 @@
+requests==2.23.0
+pytest==5.3.5
+pytest-cov==2.8.1
+PyQt5==5.12.3
