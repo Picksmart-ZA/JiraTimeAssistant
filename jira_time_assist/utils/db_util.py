@@ -27,7 +27,7 @@ def create_time_log(cursor):
 
 
 def create_db():
-    conn = sqlite3.connect("jira_time_assist.db3")
+    conn = sqlite3.connect("jira_time_assist/jira_time_assist.db3")
 
     if conn:
         cursor = conn.cursor()
