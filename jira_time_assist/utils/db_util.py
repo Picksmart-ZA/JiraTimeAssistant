@@ -4,7 +4,7 @@ settings_create: str = '''
         CREATE TABLE settings (url VARCHAR(255), user VARCHAR(255), password VARCHAR(255))
     '''
 task_create: str = '''
-        CREATE TABLE task (id INTEGER, ticket VARCHAR(255), description VARCHAR(255), jira_json VARCHAR(10)) 
+        CREATE TABLE task (id INTEGER, ticket VARCHAR(255), description VARCHAR(255), jira_json VARCHAR(10), removed BOOLEAN) 
     '''
 time_log_create: str = '''
         CREATE TABLE time_log (id INTEGER, task_id INTEGER, start_time DATETIME, end_time DATETIME, submitted BOOLEAN)

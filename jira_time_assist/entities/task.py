@@ -6,11 +6,13 @@ class Task:
     __description: str = ""
     __time_logs: [TimeLog] = []
     __total_time_logged: int = 0
+    __removed: bool = 0
 
-    def __init__(self, ticket_number, description, time_logs):
+    def __init__(self, ticket_number, description, time_logs, removed):
         self.__ticket_number = ticket_number
         self.__description = description
         self.__time_logs = time_logs
+        self.__removed = removed
 
     def get_ticket_number(self):
         return self.__ticket_number
