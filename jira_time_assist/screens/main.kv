@@ -1,4 +1,50 @@
 
+<SettingsLabel@Label>:
+    halign: "left"
+
+<SettingsPopup>:
+    url_text_input: url
+    username_text_input: username
+    password_text_input: password
+
+    size_hint: .5, .5
+    auto_dismiss: False
+    title: "Settings"
+
+    BoxLayout:
+        orientation: "vertical"
+
+        GridLayout:
+            rows: 4
+            cols: 2
+            
+            SettingsLabel:
+                text:"URL:"
+                
+            TextInput:
+                id: url
+                
+            SettingsLabel:
+                text:"Username:"
+                
+            TextInput:
+                id: username
+
+            SettingsLabel:
+                text:"Password:"
+                
+            TextInput:
+                id: password
+
+            Button:
+                text: "Save"
+                on_press: root.save_settings()
+
+            Button:
+                text: "Cancel"
+                on_press: root.dismiss()
+                
+
 <MainScreen>:
     orientation: "vertical"
     
@@ -17,8 +63,12 @@
             text: "2"
 
     BoxLayout:
-        height: 30
+        height: 10
         orientation: "horizontal"
         
         Label:
             text: "3"
+
+        Button:
+            text: "Settings"
+            on_press: root.open_popup()
